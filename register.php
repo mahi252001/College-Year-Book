@@ -44,12 +44,12 @@
 					$dob=$_POST['dob'];
 						$branch=$_POST['branch'];
 				$usertype=$_POST['usertype'];
-				$sql="";
-			/*	$sql="INSERT INTO users(userid,name,username,password,email,mobilenumber,gender,address,usertype) VALUES (?,?,?,?,?,?,?,?,?)";
+				//$sql="";
+				$sql="INSERT INTO users(userid,name,username,password,email,mobilenumber,gender,address,usertype) VALUES (?,?,?,?,?,?,?,?,?)";
 				$stmt=$conn->prepare($sql);
 				$stmt->bind_param("sssssssss",$userid,$name,$username,$password,$email,$mobilenumber,$gender,$address,$usertype);
 				$stmt->execute();
-				$result=$stmt->get_result();*/
+				$result=$stmt->get_result();
 					if($usertype=="admin"){
 						$sql="INSERT INTO admins VALUES ('$name','$username','$password','$mobilenumber','$address','$gender','$branch','$dob')";
 					}
